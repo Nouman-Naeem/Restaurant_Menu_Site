@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../CSS/main.css">
+    <title>Restaurant Menu</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body class="bg-[#F1F5F8]">
+    <section class="text-center font-bold text-4xl text-[#102A42] pt-12">
+        <h1>Our Menu</h1>
+        <div class="pt-4">
+            <div class="p-0.5 w-14 bg-[#C59D5F] mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- <section class="pt-12 pb-10">
+        <div class="flex flex-row justify-center space-x-4">
+            <button onclick="filterItems('all')" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">All</button>
+            <button onclick="filterItems('breakfast')" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Breakfast</button>
+            <button onclick="filterItems('lunch')" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Lunch</button>
+            <button onclick="filterItems('shakes')" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Shakes</button>
+            
+            <button onclick="filterItems('dinner')" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Dinner</button>
+        </div>
+    </section>
+    
+    <section id="menu-items" class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-16 py-8">
+        <div class="menu-item breakfast flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-1.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Buttermilk Pancakes</h2>
+                <span class="text-[#C59D5F] font-semibold">$15.99</span>
+                <p class="text-gray-600 text-sm">I'm baby woke mlkshk wolf bitters live-edge blue bottle.</p>
+            </div>
+        </div>
+        <div class="menu-item lunch flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-2.jpeg" alt="Dinner Double">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Dinner Double</h2>
+                <span class="text-[#C59D5F] font-semibold">$13.99</span>
+                <p class="text-gray-600 text-sm">Vaporware iPhone mumblecore selvage raw denim slow-carb.</p>
+            </div>
+        </div>
+        <div class="menu-item shakes flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-3.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Godzilla milkshake</h2>
+                <span class="text-[#C59D5F] font-semibold">$6.99</span>
+                <p class="text-gray-600 text-sm">ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.                </p>
+            </div>
+        </div>
+        <div class="menu-item breakfast flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-4.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Country Delight</h2>
+                <span class="text-[#C59D5F] font-semibold">$20.99</span>
+                <p class="text-gray-600 text-sm">Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut,</p>
+            </div>
+        </div>
+        <div class="menu-item lunch flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-5.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Egg Attack</h2>
+                <span class="text-[#C59D5F] font-semibold">$22.99</span>
+                <p class="text-gray-600 text-sm">franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up.</p>
+            </div>
+        </div>
+        <div class="menu-item shakes flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-6.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Oreo Dream</h2>
+                <span class="text-[#C59D5F] font-semibold">$15.99</span>
+                <p class="text-gray-600 text-sm">Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday</p>
+            </div>
+        </div>
+        <div class="menu-item breakfast flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-7.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Bacon Overflow</h2>
+                <span class="text-[#C59D5F] font-semibold">$8.99</span>
+                <p class="text-gray-600 text-sm">carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird</p>
+            </div>
+        </div>
+        <div class="menu-item lunch flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-8.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">american classic</h2>
+                <span class="text-[#C59D5F] font-semibold">$12.99</span>
+                <p class="text-gray-600 text-sm">on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut</p>
+            </div>
+        </div>
+        <div class="menu-item shakes flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-9.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Quarantine Buddy</h2>
+                <span class="text-[#C59D5F] font-semibold">$16.99</span>
+                <p class="text-gray-600 text-sm">skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.</p>
+            </div>
+        </div>
+        <div class="menu-item dinner flex items-start space-x-4 md:space-x-6">
+            <img class="border border-[#C59D5F] w-32 h-24 md:w-48 md:h-32 object-cover" 
+                 src="../Images/item-10.jpeg" alt="Buttermilk Pancakes">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-gray-800">Steak Dinner</h2>
+                <span class="text-[#C59D5F] font-semibold">$39.99</span>
+                <p class="text-gray-600 text-sm">skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.</p>
+            </div>
+        </div>
+    </section> -->
+    <section class="pt-12 pb-10">
+        <section class="flex flex-row justify-center space-x-4">
+            <button id="all" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">All</button>
+            <button id="breakfast" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Breakfast</button>
+            <button id="lunch" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Lunch</button>
+            <button id="shakes" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Shakes</button>
+            <button id="dinner" class="filter-btn border border-[#C59D5F] rounded-md text-[#C59D5F] px-4 py-1 hover:bg-[#C59D5F] hover:text-white">Dinner</button>
+        </section>
+    </section>
+    
+    <section id="menu-items" class="grid grid-cols-1 sm:grid-cols-2 gap-8 px-4 sm:px-8 lg:px-16 py-8">
+
+    </section>
+<script src="../JS/main.js"></script>
+</body>
+</html>
